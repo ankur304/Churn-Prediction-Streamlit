@@ -172,13 +172,8 @@ if prediction_proba > 0.5:
   print("Customer will churn")
 else:
   print("Customer will not churn")
-
-!pip install streamlit pyngrok --quiet
-
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
-
-!ls
 
 # app.py
 
