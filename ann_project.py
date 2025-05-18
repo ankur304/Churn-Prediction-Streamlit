@@ -19,6 +19,7 @@ with open('scaler.pkl', 'rb') as file:
 
 # Streamlit UI
 st.title('Customer Churn Prediction')
+st.write("Loaded gender encoder classes:", label_encoder_gender.classes_)
 
 # User input
 geography = st.selectbox('Geography', onehot_encoder_geo.categories_[0])
