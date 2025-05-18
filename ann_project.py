@@ -63,8 +63,6 @@ X_test = scaler.transform(X_test)
 with open('scaler.pkl','wb') as file:
   pickle.dump(scaler, file)
 
-pip install tensorflow
-
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
