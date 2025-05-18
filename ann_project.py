@@ -22,7 +22,7 @@ st.title('Customer Churn Prediction')
 
 # User input
 geography = st.selectbox('Geography', onehot_encoder_geo.categories_[0])
-gender = st.selectbox('Gender', label_encoder_gender.classes_)
+gender = st.selectbox('Gender', ["Male","Female"])
 age = st.slider('Age', 18, 92)
 balance = st.number_input('Balance')
 credit_score = st.number_input("Credit Score")
@@ -32,10 +32,14 @@ num_of_products = st.slider('Number of Products', 1, 4)
 has_cr_card = st.selectbox('Has credit card', [0, 1])
 is_active_member = st.selectbox('Is Active Member', [0, 1])
 
+gen=0
+if gender=="Male":
+    gen=1
+    
 # Prepare input data
 input_data = pd.DataFrame({
     'CreditScore': [credit_score],
-    'Gender': [label_encoder_gender.transform([gender])[0]],
+    'Gender': [gen],
     'Age': [age],
     'Tenure': [tenure],
     'Balance': [balance],
