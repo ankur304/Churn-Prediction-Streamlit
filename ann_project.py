@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import tensorflow as tf
 
 # Load the trained model
 model = tf.keras.models.load_model('model.h5')
